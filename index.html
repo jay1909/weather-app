@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+            <button id="unit-toggle">°C / °F</button>
+        </div>
+
+        <!-- Current Weather -->
+        <div class="current-weather">
+            <div class="weather-icon">
+                <i id="weather-icon" class="fas fa-cloud"></i>
+            </div>
+            <div class="temp">
+                <span id="temp">--</span><span id="unit">°C</span>
+            </div>
+            <div class="city" id="city">--</div>
+            <div class="details">
+                <div class="col">
+                    <i class="fas fa-water"></i>
+                    <div>
+                        <span id="humidity">--</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <span id="wind">--</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <span id="pressure">--</span>
+                        <p>Pressure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast -->
+        <div class="forecast">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast-cards" id="forecast-cards"></div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="error">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
